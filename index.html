@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+  .hidden {
+    display: none;
+  }
+
+  .arrow-icon {
+    cursor: pointer;
+  }
+</style>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+
+<table>
+  <tr>
+    <th>Coluna 1</th>
+    <th>Coluna 2</th>
+    <th>Coluna 3</th>
+    <th>Coluna 4</th>
+  </tr>
+  <tr>
+    <td>
+      <span class="arrow-icon" onclick="toggleCell(this)">
+        <i class="fas fa-chevron-down"></i>
+      </span>
+      <span class="cell-value">Valor 1A</span>
+    </td>
+    <td>
+      <span class="arrow-icon" onclick="toggleCell(this)">
+        <i class="fas fa-chevron-down"></i>
+      </span>
+      <span class="cell-value">Valor 2A</span>
+    </td>
+    <td>
+      <span class="arrow-icon" onclick="toggleCell(this)">
+        <i class="fas fa-chevron-down"></i>
+      </span>
+      <span class="cell-value">Valor 3A</span>
+    </td>
+    <td>
+      <span class="arrow-icon" onclick="toggleCell(this)">
+        <i class="fas fa-chevron-down"></i>
+      </span>
+      <span class="cell-value">Valor 4A</span>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <span class="arrow-icon" onclick="toggleCell(this)">
+        <i class="fas fa-chevron-down"></i>
+      </span>
+      <span class="cell-value">Valor 1B</span>
+    </td>
+    <td>
+      <span class="arrow-icon" onclick="toggleCell(this)">
+        <i class="fas fa-chevron-down"></i>
+      </span>
+      <span class="cell-value">Valor 2B</span>
+    </td>
+    <td>
+      <span class="arrow-icon" onclick="toggleCell(this)">
+        <i class="fas fa-chevron-down"></i>
+      </span>
+      <span class="cell-value">Valor 3B</span>
+    </td>
+    <td>
+      <span class="arrow-icon" onclick="toggleCell(this)">
+        <i class="fas fa-chevron-down"></i>
+      </span>
+      <span class="cell-value">Valor 4B</span>
+    </td>
+  </tr>
+</table>
+
+<script>
+  function toggleCell(arrowIcon) {
+    var cell = arrowIcon.parentNode;
+    var cellValue = cell.querySelector('.cell-value');
+    cellValue.classList.toggle('hidden');
+
+    var chevronIcon = arrowIcon.querySelector('i');
+    chevronIcon.classList.toggle('fa-chevron-down');
+    chevronIcon.classList.toggle('fa-chevron-up');
+  }
+</script>
+
+  
+</body>
+</html>
