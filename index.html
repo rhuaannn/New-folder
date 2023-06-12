@@ -81,11 +81,11 @@
 
 <script>
   function toggleCell(arrowIcon) {
-    var cell = arrowIcon.parentNode;
-    var cellValue = cell.querySelector('.cell-value');
+    let cell = arrowIcon.parentNode;
+    let cellValue = cell.querySelector('.cell-value');
     cellValue.classList.toggle('hidden');
 
-    var chevronIcon = arrowIcon.querySelector('i');
+    let chevronIcon = arrowIcon.querySelector('i');
     chevronIcon.classList.toggle('fa-chevron-down');
     chevronIcon.classList.toggle('fa-chevron-up');
   }
